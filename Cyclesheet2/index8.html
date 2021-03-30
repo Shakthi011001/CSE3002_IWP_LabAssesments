@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Balance Checking</title>
+<style>
+  body{
+    background-color: #7579e7;
+  }
+</style>
+<script type="text/javascript">
+function check()
+{
+var ac_no=parseInt(prompt("Enter Account No."));
+var limit=parseInt(prompt("Enter Credit Limit"));
+var begin_bal=parseInt(prompt("Enter Beginning Balance"));
+var expe=parseInt(prompt("Enter Expenditures"));
+var credit_pay=parseInt(prompt("Enter Credit Payments"));
+var new_bal=begin_bal+expe-credit_pay;
+document.write("\nAccount No: "+ac_no+"<br>");
+document.write("\nCredit Limit: "+limit+"<br>");
+document.write("\nBeginning Balance: "+begin_bal+"<br>");
+document.write("\nTotal Expenditures: "+expe+"<br>");
+document.write("\nTotal Credit Payments: "+credit_pay+"<br>");
+document.write("\nNew Balance: "+new_bal+"<br>");
+if(new_bal>limit)
+{
+document.write("Credit Limit Exceeded");
+}
+}
+</script>
+</head>
+<body>
+<input type="submit" value="Click Me" onclick="check();">
+</body>
+</html>

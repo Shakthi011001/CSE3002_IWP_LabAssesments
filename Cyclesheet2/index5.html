@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Question 5</title>
+  <style>
+    body {
+      font-family: 'Arial';
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #card {
+      width: 25vw;
+      height: 30vw;
+      background-color: lightblue;
+      margin: 2vw 20vw 0;
+    }
+
+    #creator {
+      width: 30vw;
+      margin: 0 0 0 5vw;
+    }
+  </style>
+</head>
+
+<body>
+  <div="creator">
+    <h1>Greeting Card Maker</h1>
+    <span>Pick a message</span><br>
+    <input type="radio" name="cardType" id="type1" value="birthday" checked> Happy Birthday!<br>
+    <input type="radio" name="cardType" id="type2" value="loveYou"> Love you!<br>
+    <input type="radio" name="cardType" id="type3" value="missingYou"> Missing you!<br>
+    <input type="radio" name="cardType" id="type4" value="congratulations"> Congratulations!<br>
+    <br>
+    <span>Who is the lucky one?</span>
+    <br>
+    <input type="text" id="receiverTxt">
+    <br><br>
+    <span>What's their favourite colour?</span>
+    <br>
+    <input type="color" id="color">
+
+    <br><br>
+
+    <span>Pick a font</span><br>
+    <select name="fonts" id="">
+      <option value="arial">Arial</option>
+      <option value="baloo">Baloo</option>
+      <option value="chewy">Chewy</option>
+      <option value="emilyscandy">Emilys Candy</option>
+      <option value="montserrat">Montserrat</option>
+      <option value="raleway">Raleway</option>
+    </select>
+
+    <br><br>
+    <span>Pick a font colour</span>
+    <br><br>
+    <input type="color" id="color">
+    <br><br>
+    <button id="createBtn" onclick="makeCard()">Make your card</button>
+  </div>
+  <div id="card">
+    <span id="message"></span>
+    <br>
+    <span id="receiver"></span>
+  </div>
+</body>
+
+<script>
+  let message;
+  let receiver;
+  let color;
+  let types;
+  let type_value;
+
+  function getDetails() {
+    types = document.getElementsByName("cardType");
+    receiver = document.getElementById("receiverTxt").value;
+    color = document.getElementById("color").value;
+    for (let i = 0; i < types.length; i++) {
+      if (types[i].checked) {
+        type_value = types[i].value;
+      }
+    }
+    switch (type_value) {
+      case "birthday":
+        message = "Happy Birthday";
+        break;
+      case "loveYou":
+        message = "I love you";
+        break;
+      case "missingYou":
+        message = "I miss you";
+        break;
+      case "congratulations":
+        message = "Congratulations";
+        break;
+    }
+  }
+
+  function makeCard() {
+    getDetails();
+    document.getElementById("message").innerHTML = message + "!";
+    document.getElementById("receiver").innerHTML = receiver;
+    document.getElementById("card").style.backgroundColor = color;
+  }
+</script>
+
+</html>

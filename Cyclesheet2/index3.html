@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Quesion 2</title>
+<script>
+function Count()
+{
+var IntegerData=new Array(48,36,15,14,3,8,24,6,18,79);
+for(var i=0; i<IntegerData.length; i++)
+{
+if(IntegerData[i]>13 && IntegerData[i]<29)
+{
+var data=IntegerData[i];
+document.getElementById('output1').append(data+", ");
+}
+}
+}
+</script>
+</head>
+<body>
+Integer Data in Array: 48,36,15,14,3,8,24,6,18,79
+<br>
+<br>
+<button type="button" onclick="Count()">Count Numbers</button>
+<div id="output1"> </div>
+</body>
+</html>

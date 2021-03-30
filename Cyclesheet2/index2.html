@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 3</title>
+    <style>
+      body{
+        background-color: #289672;
+        }
+      }
+    </style>
+  </head>
+    <script>
+      function Gallons(){
+  var m1;
+  var a1;
+  var cost;
+  var fuel;
+  document.body.style.background = "#289672";
+  m1 = Number(document.getElementById("M").value);
+  cost_gallon = Number(document.getElementById("C").value);
+  a1 = Number(document.getElementById("A").value);
+  fuel = parseInt(m1)/parseInt(cost_gallon);
+  cost = parseInt(fuel)*parseInt(m1);
+  document.writeln( "<h1> Fuel required for Trip is: " + fuel + "</h1>" );
+  document.writeln( "<h1> Cost for Trip is: " + cost + "</h1>" );
+
+  }
+  </script>
+  <body>
+    <h1>Finding Cost of trip</h1>
+    <br>
+    Enter number of miles : <input type="text" id="M"></input><br>
+    Enter Vehicle Consumption(Miles per Gallon ): <input type="text" id="C"></input><br>
+    Enter cost of gallon: <input type="text" id="A"></input><br>
+  <button onclick="Gallons()">submit</button>
+  </body>
+</html>
