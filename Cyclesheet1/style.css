@@ -1,0 +1,52 @@
+body {
+    background-color: grey;
+}
+h1 {
+    text-align: center;
+}
+
+#menu p {
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline;
+    margin-right: 3px;
+}
+#all {
+    position:absolute;
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+
+}
+#pic {
+    margin-top: 50px;
+}
+
+#rating {
+    display: inline-flex;
+    padding:20px;
+    font-size:30pt;
+    background-color:green;
+    color:#eee7e7;
+    margin-top: 50px;
+    margin-left: 5px;
+}
+
+#pic {
+    float: left;
+    width: auto;
+}
+#rating {
+    float: left;
+    width: auto;
+}
+#score {
+    float: left;
+    width: 50%;
+    margin-top: 40px;
+    margin-left: 5px;
+}

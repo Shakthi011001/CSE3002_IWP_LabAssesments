@@ -1,0 +1,43 @@
+* {
+box-sizing: border-box;
+text-decoration: none;
+}
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+header {
+background-color: #666;
+padding: 30px;
+text-align: center;
+font-size: 35px;
+color: white;
+width:100%;
+background-image:url("https://www.nlc.org/wp-content/uploads/2019/05/web_banner-3.jpg");
+}
+nav {
+float: left;
+width: 30%;
+background: #ccc;
+padding: 20px;
+background-color : #FFFF99;
+height: 300px;
+}
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+article {
+float: left;
+padding: 20px;
+width: 70%;
+height: 300px;
+}
+a{
+  font-weight: lighter;
+  color: black;
+}
+a:hover {
+font-weight : bold;
+background-color: black;
+color: white;
+}

@@ -1,0 +1,13 @@
+h1{
+  color: tomato;
+}
+p{
+  color: green;
+}
+body{
+  background-color: whitesmoke;
+  font-weight: bold;
+  font: Verdana;
+  border: solid blue;
+   border-width: thin;
+}
